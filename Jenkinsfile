@@ -1,7 +1,7 @@
-pipeline {
+jspipeline {
   agent { label 'Jenkins-Agent' }
   tools {
-    NodeJS 'Nodejs 21.6.2'
+    nodejs 'Nodejs21.6.2'
   }
   stages {
     stage("Cleanup Workspace") {
