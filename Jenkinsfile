@@ -12,7 +12,7 @@ jspipeline {
 
     stage("Checkout from SCM") {
       steps {
-        git branch 'main', ulr: 'https://github.com/spokhriyal/firstapp.git'
+        git branch: 'main', url: 'https://github.com/spokhriyal/firstapp.git'
       }
     }
 
