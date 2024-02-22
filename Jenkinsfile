@@ -1,4 +1,4 @@
-jspipeline {
+pipeline {
   agent { label 'Jenkins-Agent' }
   tools {
     nodejs 'Nodejs21.6.2'
