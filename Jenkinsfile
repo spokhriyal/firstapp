@@ -24,13 +24,13 @@ pipeline {
     
     stage("Build Application") {
       steps {
-        sh "npm build"
+        sh "npm run build"
       }
     }
 
     stage("Test Application") {
       steps {
-        sh "ng test"
+        sh "npm run test"
       }
     }
   }
