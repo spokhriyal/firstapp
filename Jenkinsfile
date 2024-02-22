@@ -16,6 +16,12 @@ jspipeline {
       }
     }
 
+    stage("Install Dependencies") {
+      steps {
+        sh "npm install"
+      }
+    }
+    
     stage("Build Application") {
       steps {
         sh "npm build"
