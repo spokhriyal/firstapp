@@ -1,7 +1,7 @@
 pipeline {
   agent { label 'Jenkins-Agent' }
   tools {
-    
+    NodeJS 'Nodejs 21.6.2'
   }
   stages {
     stage("Cleanup Workspace") {
@@ -12,13 +12,19 @@ pipeline {
 
     stage("Checkout from SCM") {
       steps {
-        git branch 'main', ulr: ''
+        git branch 'main', ulr: 'https://github.com/spokhriyal/firstapp.git'
       }
     }
 
     stage("Build Application") {
       steps {
-        sh "dotnet build"
+        sh "npm build"
+      }
+    }
+
+    stage("Test Application") {
+      steps {
+        sh "ng test"
       }
     }
   }
